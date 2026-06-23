@@ -8,8 +8,12 @@
       "destination": "/index.html"
     },
     {
-      "source": "/posts/:path*",
-      "destination": "/output/posts/:path*"
+      "source": "/posts/:path/",
+      "destination": "/output/posts/:path.html"
+    },
+    {
+      "source": "/posts/:path",
+      "destination": "/output/posts/:path.html"
     },
     {
       "source": "/api/posts",
