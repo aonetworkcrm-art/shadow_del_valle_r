@@ -268,7 +268,7 @@ class ShadowDelValleAgent:
     
     <div class="cta-box">
         <p>💡 <strong>IMPORTANTE:</strong> Para que los enlaces funcionen correctamente, permite ventanas emergentes (popups) para este sitio en tu navegador. Es rápido y seguro.</p>
-        <a href="javascript:void(0)" class="btn-accion" onclick="window.open('https://shadow-del-valle-r.vercel.app', '_blank'); monetagTrigger && monetagTrigger(); return false;">👉 Verifica si Calificas Ahora — Es Gratis</a>
+        <a href="javascript:void(0)" class="btn-accion" onclick="window.open('https://shadow-del-valle-r.vercel.app', '_blank'); return false;">👉 Verifica si Calificas Ahora — Es Gratis</a>
     </div>
     """
             
