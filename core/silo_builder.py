@@ -254,6 +254,36 @@ class Refinery:
     <script type="application/ld+json">{article_schema}</script>
     {faq_schema and '<script type="application/ld+json">' + faq_schema + '</script>' or ''}
     
+    <!-- Analytics: Shadow Del Valle R tracking -->
+    <script defer>
+        (function() {
+            var slug = '{slug}';
+            // Enviar pageview al cargar
+            if (navigator.sendBeacon) {
+                navigator.sendBeacon('/api/track', JSON.stringify({ slug: slug, type: 'pageview' }));
+            } else {
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '/api/track', true);
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                xhr.send(JSON.stringify({ slug: slug, type: 'pageview' }));
+            }
+            // Tracking de clics en CTAs
+            document.addEventListener('click', function(e) {
+                var btn = e.target.closest('.btn-accion, .btn-secundario');
+                if (btn) {
+                    if (navigator.sendBeacon) {
+                        navigator.sendBeacon('/api/track', JSON.stringify({ slug: slug, type: 'click' }));
+                    } else {
+                        var xhr = new XMLHttpRequest();
+                        xhr.open('POST', '/api/track', true);
+                        xhr.setRequestHeader('Content-Type', 'application/json');
+                        xhr.send(JSON.stringify({ slug: slug, type: 'click' }));
+                    }
+                }
+            });
+        })();
+    </script>
+    
     <style>{css}</style>
     {monetag_head}
 </head>

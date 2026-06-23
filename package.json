@@ -1,0 +1,8 @@
+{
+  "name": "shadow-del-valle-r",
+  "version": "1.0.0",
+  "description": "Shadow Del Valle R — Ecosistema de Contenido Premium",
+  "dependencies": {
+    "@vercel/kv": "^2.0.0"
+  }
+}

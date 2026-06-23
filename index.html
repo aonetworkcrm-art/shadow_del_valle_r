@@ -55,6 +55,18 @@
                 <div class="stat-num" id="topCpc">$0</div>
                 <div class="stat-label">CPC Maximo</div>
             </div>
+            <div class="stat-box">
+                <div class="stat-num" id="analyticsViews">0</div>
+                <div class="stat-label">Visitas Hoy</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num" id="analyticsClicks">0</div>
+                <div class="stat-label">Clics Hoy</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num" id="analyticsTotal">0</div>
+                <div class="stat-label">Total Visitas</div>
+            </div>
         </div>
 
         <h2>📄 Articulos Recientes</h2>
@@ -69,6 +81,21 @@
     </div>
 
     <script>
+        // Cargar analytics
+        async function loadAnalytics() {
+            try {
+                const res = await fetch('/api/stats');
+                const data = await res.json();
+                if (data && data.today) {
+                    document.getElementById('analyticsViews').textContent = data.today.pageviews || 0;
+                    document.getElementById('analyticsClicks').textContent = data.today.clicks || 0;
+                    document.getElementById('analyticsTotal').textContent = data.allTime?.pageviews || 0;
+                }
+            } catch(e) {
+                // Analytics no configurado aun
+            }
+        }
+
         // Cargar posts desde el API
         async function loadPosts() {
             try {
@@ -117,7 +144,10 @@
         }
 
         document.getElementById('year').textContent = new Date().getFullYear();
+        loadAnalytics();
         loadPosts();
+        // Recargar analytics cada 60 segundos
+        setInterval(loadAnalytics, 60000);
     </script>
 </body>
 </html>
