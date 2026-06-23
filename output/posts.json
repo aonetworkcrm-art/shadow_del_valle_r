@@ -1,11 +1,26 @@
 [
   {
+    "slug": "guia-abogados",
+    "titulo": "Guia Abogados",
+    "timestamp": 1782201284,
+    "cpc": 220
+  },
+  {
+    "slug": "guia-compensaci\u00f3n",
+    "titulo": "Guia Compensaci\u00f3n",
+    "timestamp": 1782203290,
+    "cpc": 220
+  },
+  {
+    "slug": "guia-indemnizaci\u00f3n",
+    "titulo": "Guia Indemnizaci\u00f3n",
+    "timestamp": 1782200855,
+    "cpc": 220
+  },
+  {
     "slug": "guia-lesiones",
-    "title": "Guía Completa sobre lesiones: Todo lo que Necesitas Saber [2026]",
-    "niche": "Abogados de Accidentes (Personal Injury)",
-    "cpc": 220,
-    "frr": 21744.19,
-    "date": "2026-06-23",
-    "url": "/posts/guia-lesiones/"
+    "titulo": "Guia Lesiones",
+    "timestamp": 1782202679,
+    "cpc": 220
   }
 ]
