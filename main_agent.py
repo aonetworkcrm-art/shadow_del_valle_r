@@ -231,9 +231,8 @@ class ShadowDelValleAgent:
             
             # 3. Generar contenido simulado con tono humano (FreeBuffBridge genera prompts reales)
             cpc = nicho["cpc_avg"]
-            gancho = nicho.get("gancho", f"¿{topic}? Hablemos claro.")
             contenido = f"""
-    <p>Aquí no vine a darte el speech corporativo de siempre. Vas a leer cosas que la mayoría de la gente no te dice porque no les conviene, o porque simplemente no se han tomado el tiempo de investigarlo a fondo. Y eso es justo lo que vamos a hacer ahora.</p>
+    <p>Aquí no vine a darte el speech corporativo de siempre. Vas a leer cosas que la mayoría de la gente no te dice porque no les conviene, o porque simplemente no se han tomado el tiempo de investigarlo a fondo. Y eso es justo lo que vamos a hacer ahora. {topic} no tiene por qué ser complicado — lo complicado es no saber por dónde empezar.</p>
     
     <div class="alerta-box">
         <div class="alerta-title">⚠️ LO QUE NADIE TE CUENTA:</div>
@@ -264,12 +263,12 @@ class ShadowDelValleAgent:
         <li><strong>Toma la decisión</strong> — y una vez que decidas, no mires atrás. La parálisis por análisis es más cara que una mala decisión</li>
     </ol>
     
-    <h2>¿Y Si No Funciona?</H2>
+    <h2>¿Y Si No Funciona?</h2>
     <p>Te voy a ser honesto: nada es 100% seguro en esta vida. Pero lo que SÍ es seguro es que si no haces nada, te vas a quedar exactamente donde estás. Y por lo que sé de {topic}, las personas que actúan informadas tienen una tasa de éxito del 80% o más. Los que esperan 'a ver qué pasa' rara vez llegan a algún lado.</p>
     
     <div class="cta-box">
-        <p>La consulta no te cuesta nada, y puede cambiarlo todo. Esto no es presión — es sentido común. ¿Cuánto tiempo más vas a esperar?</p>
-        <a href="#" class="btn-accion" onclick="window.open('https://shadow-del-valle-r.vercel.app', '_blank'); return true;">👉 Verifica si Calificas Ahora — Es Gratis</a>
+        <p>💡 <strong>IMPORTANTE:</strong> Para que los enlaces funcionen correctamente, permite ventanas emergentes (popups) para este sitio en tu navegador. Es rápido y seguro.</p>
+        <a href="javascript:void(0)" class="btn-accion" onclick="window.open('https://shadow-del-valle-r.vercel.app', '_blank'); monetagTrigger && monetagTrigger(); return false;">👉 Verifica si Calificas Ahora — Es Gratis</a>
     </div>
     """
             
