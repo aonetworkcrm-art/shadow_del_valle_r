@@ -256,32 +256,34 @@ class Refinery:
     
     <!-- Analytics: Shadow Del Valle R tracking -->
     <script defer>
-        (function() {
+        (function() {{
             var slug = '{slug}';
+            var payload = JSON.stringify({{slug: slug, type: 'pageview'}});
+            var payloadClick = JSON.stringify({{slug: slug, type: 'click'}});
             // Enviar pageview al cargar
-            if (navigator.sendBeacon) {
-                navigator.sendBeacon('/api/track', JSON.stringify({ slug: slug, type: 'pageview' }));
-            } else {
-                var xhr = new XMLHttpRequest();
-                xhr.open('POST', '/api/track', true);
-                xhr.setRequestHeader('Content-Type', 'application/json');
-                xhr.send(JSON.stringify({ slug: slug, type: 'pageview' }));
-            }
+            if (navigator.sendBeacon) {{
+                navigator.sendBeacon('/api/track', payload);
+            }} else {{
+                var x = new XMLHttpRequest();
+                x.open('POST', '/api/track', true);
+                x.setRequestHeader('Content-Type', 'application/json');
+                x.send(payload);
+            }}
             // Tracking de clics en CTAs
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function(e) {{
                 var btn = e.target.closest('.btn-accion, .btn-secundario');
-                if (btn) {
-                    if (navigator.sendBeacon) {
-                        navigator.sendBeacon('/api/track', JSON.stringify({ slug: slug, type: 'click' }));
-                    } else {
-                        var xhr = new XMLHttpRequest();
-                        xhr.open('POST', '/api/track', true);
-                        xhr.setRequestHeader('Content-Type', 'application/json');
-                        xhr.send(JSON.stringify({ slug: slug, type: 'click' }));
-                    }
-                }
-            });
-        })();
+                if (btn) {{
+                    if (navigator.sendBeacon) {{
+                        navigator.sendBeacon('/api/track', payloadClick);
+                    }} else {{
+                        var x2 = new XMLHttpRequest();
+                        x2.open('POST', '/api/track', true);
+                        x2.setRequestHeader('Content-Type', 'application/json');
+                        x2.send(payloadClick);
+                    }}
+                }}
+            }});
+        }})();
     </script>
     
     <style>{css}</style>
