@@ -1,0 +1,14 @@
+# Shadow Del Valle R — Python Dependencies
+# ==========================================
+# Sistema AaaS de Arbitraje de Tráfico
+# compatible con Python 3.9+
+
+# Core — sin dependencias externas pesadas
+# El sistema corre con librería estándar de Python
+# No requiere FastAPI, no requiere base de datos
+
+# Opcional: Para usar OpenRouter (generación de contenido con IA)
+# pip install openai>=1.60.0
+
+# Opcional: Para deploy automático a Vercel
+# npm install -g vercel

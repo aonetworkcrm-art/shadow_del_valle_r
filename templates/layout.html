@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITULO}}</title>
+    <meta name="description" content="{{META_DESC}}">
+    <meta name="keywords" content="{{KEYWORDS}}">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Shadow Del Valle R">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{TITULO}}">
+    <meta property="og:description" content="{{META_DESC}}">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="https://shadowdelvaller.com/posts/{{SLUG}}/">
+    <script type="application/ld+json">
+    {{ARTICLE_SCHEMA}}
+    </script>
+    {{FAQ_SCHEMA}}
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--bg:#fafafa;--text:#1a1a1a;--accent:#d32f2f;--accent2:#1565c0;
+               --box-bg:#fff5f5;--success-bg:#f0fdf4;--tip-bg:#fff7ed;
+               --card:#fff;--border:#e5e7eb;--dim:#6b7280}
+        body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+             line-height:1.7;color:var(--text);background:var(--bg);
+             max-width:720px;margin:0 auto;padding:24px 20px}
+        h1{font-size:1.8rem;color:#111;line-height:1.25;margin-bottom:8px}
+        h2{font-size:1.3rem;margin:32px 0 12px;color:#222;border-bottom:2px solid var(--accent);padding-bottom:6px}
+        p{margin-bottom:16px;font-size:1.05rem;color:#333}
+        .alerta-box{background:var(--box-bg);border-left:4px solid var(--accent);border-radius:6px;padding:16px 20px;margin:24px 0}
+        .success-box{background:var(--success-bg);border-left:4px solid #16a34a;border-radius:6px;padding:16px 20px;margin:24px 0}
+        .tip-box{background:var(--tip-bg);border-left:4px solid #f59e0b;border-radius:6px;padding:16px 20px;margin:24px 0}
+        ul,ol{margin-bottom:16px;padding-left:24px}
+        li{margin:6px 0;font-size:1.05rem}
+        .btn-accion{display:inline-block;background:var(--accent);color:#fff;padding:14px 28px;
+                    text-decoration:none;font-weight:700;border-radius:8px;margin:8px 0;transition:all 0.2s}
+        .btn-accion:hover{background:#b71c1c;transform:translateY(-1px)}
+        .cta-box{margin:32px 0;padding:24px;border:1px solid var(--border);border-radius:8px;text-align:center;background:var(--card)}
+        footer{margin-top:48px;padding:20px 0;border-top:1px solid var(--border);text-align:center;font-size:0.75rem;color:var(--dim)}
+        @media(max-width:600px){body{padding:16px 12px}h1{font-size:1.4rem}}
+    </style>
+    {{MONETAG_HEAD}}
+</head>
+<body>
+    <header>
+        <h1>{{TITULO}}</h1>
+        <p style="font-size:0.85rem;color:var(--dim);margin-bottom:24px">
+            📂 {{NICHO}} · 💰 CPC: ${{CPC}} · 📅 {{FECHA}}
+        </p>
+    </header>
+    <main>
+        {{CONTENIDO}}
+    </main>
+    {{SECTION_FAQS}}
+    {{SECTION_CTA}}
+    <footer>
+        <strong>🌑 Shadow Del Valle R</strong> &mdash; {{NICHO}}<br>
+        Generado por IA · {{FECHA}}
+    </footer>
+    {{MONETAG_BODY}}
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Del Valle R — Contenido Premium</title>
+    <meta name="description" content="Contenido informativo de alta calidad. Guías, análisis y recursos actualizados.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Shadow Del Valle R">
+    <meta property="og:description" content="Contenido premium cuidadosamente elaborado.">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--bg:#0a0a0f;--card:#12121a;--text:#d4d4d8;--accent:#d32f2f;--dim:#6b7280;--border:rgba(211,47,47,0.15)}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+        .container{max-width:720px;margin:0 auto;padding:40px 24px}
+        header{border-bottom:1px solid var(--border);padding:0 0 24px;margin-bottom:32px}
+        .badge{font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px}
+        h1{font-size:28px;color:#e4e4e7;margin-bottom:6px;font-weight:700}
+        .sub{color:var(--dim);font-size:13px}
+        .stats{display:flex;gap:24px;margin:24px 0;flex-wrap:wrap}
+        .stat-box{flex:1;min-width:120px;padding:16px;border:1px solid var(--border);border-radius:8px;text-align:center}
+        .stat-num{font-size:22px;color:var(--accent);font-weight:700}
+        .stat-label{font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+        h2{font-size:16px;color:#e4e4e7;margin:32px 0 16px;font-weight:600}
+        .post-list{display:flex;flex-direction:column;gap:8px}
+        .post-item{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border:1px solid var(--border);border-radius:6px;text-decoration:none;color:var(--text);transition:all 0.2s}
+        .post-item:hover{border-color:var(--accent);background:rgba(211,47,47,0.05)}
+        .post-title{font-size:13px;font-weight:500}
+        .post-meta{font-size:10px;color:var(--dim);margin-top:3px}
+        .post-cpc{font-size:11px;color:var(--accent);font-weight:600}
+        .empty{text-align:center;padding:40px 0;color:var(--dim);font-size:13px}
+        footer{margin-top:48px;padding:20px 0;border-top:1px solid var(--border);text-align:center;font-size:10px;color:var(--dim)}
+        @media(max-width:600px){.container{padding:24px 16px}h1{font-size:22px}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="badge">🌑 SHADOW DEL VALLE R</div>
+            <h1>Contenido Premium</h1>
+            <p class="sub">Informacion cuidadosamente elaborada para quienes buscan respuestas claras y directas.</p>
+        </header>
+
+        <div class="stats" id="stats">
+            <div class="stat-box">
+                <div class="stat-num" id="postCount">0</div>
+                <div class="stat-label">Articulos</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num" id="avgCpc">$0</div>
+                <div class="stat-label">CPC Promedio</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num" id="topCpc">$0</div>
+                <div class="stat-label">CPC Maximo</div>
+            </div>
+        </div>
+
+        <h2>📄 Articulos Recientes</h2>
+        <div class="post-list" id="postList">
+            <div class="empty">Generando contenido... Vuelve pronto.</div>
+        </div>
+
+        <footer>
+            <strong>🌑 Shadow Del Valle R</strong> &mdash; Ecosistema Privado de Contenido Premium<br>
+            <span id="year"></span>
+        </footer>
+    </div>
+
+    <script>
+        // Cargar posts desde el API
+        async function loadPosts() {
+            try {
+                const res = await fetch('/api/posts');
+                const data = await res.json();
+                const posts = data.posts || [];
+
+                const list = document.getElementById('postList');
+                const count = document.getElementById('postCount');
+                const avgCpc = document.getElementById('avgCpc');
+                const topCpc = document.getElementById('topCpc');
+
+                if (posts.length === 0) {
+                    list.innerHTML = '<div class="empty">Generando contenido... Vuelve pronto.</div>';
+                    return;
+                }
+
+                count.textContent = posts.length;
+
+                let totalCpc = 0;
+                let maxCpc = 0;
+                let html = '';
+
+                posts.forEach(p => {
+                    totalCpc += p.cpc || 0;
+                    if ((p.cpc || 0) > maxCpc) maxCpc = p.cpc || 0;
+                    html += '<a href="/posts/' + p.slug + '/" class="post-item">' +
+                        '<div>' +
+                        '<div class="post-title">' + p.title + '</div>' +
+                        '<div class="post-meta">' + (p.niche || 'General') + ' &middot; ' + (p.date || '') + '</div>' +
+                        '</div>' +
+                        '<div class="post-cpc">$' + (p.cpc || 0) + '</div>' +
+                        '</a>';
+                });
+
+                list.innerHTML = html;
+                avgCpc.textContent = '$' + Math.round(totalCpc / posts.length);
+                topCpc.textContent = '$' + maxCpc;
+
+            } catch(e) {
+                document.getElementById('postList').innerHTML =
+                    '<div class="empty">Cargando contenido...</div>';
+            }
+        }
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+        loadPosts();
+    </script>
+</body>
+</html>

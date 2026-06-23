@@ -1,0 +1,77 @@
+{
+  "agent": {
+    "name": "Shadow Del Valle R",
+    "version": "1.0.0",
+    "description": "Agente Autónomo de Arbitraje de Tráfico — AaaS",
+    "creator": "Romny (El Joker) + Buffy (Codebuff AI)",
+    "born": "2026-06-23T03:05:00",
+    "status": "active"
+  },
+  "radar": {
+    "umbral_frr_minimo": 150.0,
+    "intervalo_escaneo_horas": 2.0,
+    "fuentes": ["shadow_silo", "seo_oracle", "google_trends"],
+    "max_nichos_por_ronda": 5,
+    "cpc_minimo": 80.0,
+    "volumen_minimo": 500.0
+  },
+  "refinery": {
+    "sin_imagenes": true,
+    "css_nativo": true,
+    "emojis_estrategicos": true,
+    "max_parrafos": 12,
+    "incluir_faq_schema": true,
+    "incluir_article_schema": true,
+    "incluir_open_graph": true,
+    "incluir_twitter_card": true,
+    "dominio": "TU_PROYECTO.vercel.app"
+  },
+  "monetag": {
+    "site_id": "",
+    "habilitado": false,
+    "delay_carga_ms": 2000,
+    "posicion_anuncio": "despues_3er_parrafo",
+    "formato": "popunder_smartlink"
+  },
+  "scheduler": {
+    "agente_activo": true,
+    "intervalo_generacion_horas": 4.0,
+    "max_posts_por_dia": 6,
+    "estrategia": "rotating",
+    "hora_inicio": "06:00",
+    "hora_fin": "23:00"
+  },
+  "openrouter": {
+    "api_key": "",
+    "modelo": "google/gemini-2.0-flash-lite-preview",
+    "max_tokens": 2048,
+    "temperatura": 0.7
+  },
+  "github": {
+    "repo": "",
+    "branch": "main",
+    "auto_push": false
+  },
+  "vercel": {
+    "auto_deploy": false,
+    "dominio": "",
+    "framework": "static"
+  },
+  "telegram": {
+    "bot_token": "",
+    "chat_id": "",
+    "habilitado": false,
+    "alertas_criticas": true,
+    "reporte_diario": true
+  },
+  "ledger": {
+    "moneda": "USD",
+    "auto_respaldo": true,
+    "intervalo_respaldo_horas": 6.0
+  },
+  "logging": {
+    "nivel": "INFO",
+    "verbose": true,
+    "logs_a_archivo": true
+  }
+}

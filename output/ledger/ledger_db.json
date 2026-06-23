@@ -1,0 +1,64 @@
+{
+  "version": "1.0.0",
+  "ultima_actualizacion": 1782200855.6889925,
+  "fecha_actualizacion": "2026-06-23 03:47:35",
+  "total_entries": 4,
+  "entries": [
+    {
+      "id": "TXN-1782199269043",
+      "tipo": "ingreso",
+      "concepto": "Test",
+      "monto": 1000,
+      "fuente": "test",
+      "nicho": "",
+      "metadata": {},
+      "timestamp": 1782199269.0438092,
+      "fecha": "2026-06-23 03:21:09",
+      "fecha_simple": "2026-06-23"
+    },
+    {
+      "id": "TXN-1782199329822",
+      "tipo": "ingreso",
+      "concepto": "Test",
+      "monto": 999.99,
+      "fuente": "monetag",
+      "nicho": "",
+      "metadata": {},
+      "timestamp": 1782199329.8223133,
+      "fecha": "2026-06-23 03:22:09",
+      "fecha_simple": "2026-06-23"
+    },
+    {
+      "id": "TXN-1782200054492",
+      "tipo": "post",
+      "concepto": "Post: Guía Completa sobre lesiones: Todo lo que Necesitas Saber [2026]",
+      "monto": 24200.0,
+      "fuente": "seo_content",
+      "nicho": "Abogados de Accidentes (Personal Injury)",
+      "metadata": {
+        "cpc": 220.0,
+        "clicks_estimados_diarios": 110,
+        "ingreso_diario_proyectado": 24200.0
+      },
+      "timestamp": 1782200054.4929569,
+      "fecha": "2026-06-23 03:34:14",
+      "fecha_simple": "2026-06-23"
+    },
+    {
+      "id": "TXN-1782200855688",
+      "tipo": "post",
+      "concepto": "Post: Guía Completa sobre indemnización: Todo lo que Necesitas Saber [2026]",
+      "monto": 24200.0,
+      "fuente": "seo_content",
+      "nicho": "Abogados de Accidentes (Personal Injury)",
+      "metadata": {
+        "cpc": 220.0,
+        "clicks_estimados_diarios": 110,
+        "ingreso_diario_proyectado": 24200.0
+      },
+      "timestamp": 1782200855.6889925,
+      "fecha": "2026-06-23 03:47:35",
+      "fecha_simple": "2026-06-23"
+    }
+  ]
+}

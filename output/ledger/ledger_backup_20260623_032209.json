@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "ultima_actualizacion": 1782199329.8223133,
+  "fecha_actualizacion": "2026-06-23 03:22:09",
+  "total_entries": 2,
+  "entries": [
+    {
+      "id": "TXN-1782199269043",
+      "tipo": "ingreso",
+      "concepto": "Test",
+      "monto": 1000,
+      "fuente": "test",
+      "nicho": "",
+      "metadata": {},
+      "timestamp": 1782199269.0438092,
+      "fecha": "2026-06-23 03:21:09",
+      "fecha_simple": "2026-06-23"
+    },
+    {
+      "id": "TXN-1782199329822",
+      "tipo": "ingreso",
+      "concepto": "Test",
+      "monto": 999.99,
+      "fuente": "monetag",
+      "nicho": "",
+      "metadata": {},
+      "timestamp": 1782199329.8223133,
+      "fecha": "2026-06-23 03:22:09",
+      "fecha_simple": "2026-06-23"
+    }
+  ]
+}

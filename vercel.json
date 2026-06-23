@@ -1,0 +1,52 @@
+{
+  "version": 2,
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/posts/:path*",
+      "destination": "/output/posts/:path*"
+    },
+    {
+      "source": "/api/posts",
+      "destination": "/output/posts.json"
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/output/sitemap.xml"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/output/robots.txt"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/output/posts/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=3600"
+        },
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ],
+  "cleanUrls": true
+}

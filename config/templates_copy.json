@@ -1,0 +1,97 @@
+{
+  "tono": "empatico_directo",
+  "estilo": "claude_humano",
+  "plantillas": {
+    "gancho_psicologico": {
+      "descripcion": "Primeros 2 párrafos que validan el dolor del usuario",
+      "estructura": "Frase empática que valida su problema + Promesa de solución rápida",
+      "ejemplo": "Si estás aquí, es porque ya perdiste horas intentando solucionar el error X y estás frustrado. Lo sé, es un dolor de cabeza. Vamos a resolverlo en menos de dos minutos sin dar rodeos."
+    },
+    "nucleo_de_valor": {
+      "descripcion": "La respuesta directa, esquematizada",
+      "estructura": "Viñetas, listas numeradas, o tablas que entregan la solución",
+      "formato": "visual_rapido"
+    },
+    "detonante_conversion": {
+      "descripcion": "Cierre que activa la acción del usuario",
+      "estructura": "Escasez + Urgencia + Acción Directa",
+      "tipos": {
+        "smartlink": "Descarga la guía de solución inmediata aquí (Servidor Seguro)",
+        "verificacion": "Verifica si tu cuenta califica para la compensación aquí",
+        "consulta": "Accede al tabulador de alta prioridad para verificar tu caso"
+      }
+    },
+    "alertas_visuales": {
+      "atencion": "⚠️ ATENCIÓN IMPORTANTE:",
+      "consejo": "💡 CONSEJO PRO:",
+      "verificacion": "✅ VERIFICACIÓN REQUERIDA:",
+      "error_comun": "❌ ERROR COMÚN:"
+    }
+  },
+  "nichos": {
+    "personal-injury-law": {
+      "gancho": "Sufriste un accidente que no fue tu culpa y las facturas médicas se acumulan. No estás solo en esto. Vamos a explicarte exactamente cómo proteger tus derechos y obtener la compensación que mereces.",
+      "cta": "Verifica si tu caso califica para compensación aquí",
+      "palabras_poder": ["compensación", "justicia", "derechos", "gratis", "inmediato"]
+    },
+    "asset-recovery": {
+      "gancho": "Perdiste dinero en una estafa financiera y no sabes a quién recurrir. Es frustrante, lo sé. Pero hay esperanza: existen servicios profesionales que pueden recuperar tus fondos. Aquí te mostramos cómo.",
+      "cta": "Consulta si tus fondos son recuperables — Evaluación gratuita",
+      "palabras_poder": ["recuperación", "fondos", "estafa", "justicia", "devolución"]
+    },
+    "cybersecurity-compliance": {
+      "gancho": "Tu empresa necesita certificación de seguridad pero no sabes por dónde empezar. Es abrumador con tantas opciones. Vamos a desglosar los pasos críticos para que tu negocio cumpla con los estándares.",
+      "cta": "Obtén una cotización personalizada para tu empresa",
+      "palabras_poder": ["seguridad", "cumplimiento", "certificación", "protección", "empresarial"]
+    },
+    "drug-rehab": {
+      "gancho": "Ver a un ser querido luchar contra la adicción es desgarrador. No sabes a dónde acudir ni qué opciones son reales. Estamos aquí para ayudarte a encontrar el camino correcto hacia la recuperación.",
+      "cta": "Habla con un especialista hoy — Confidencial y sin compromiso",
+      "palabras_poder": ["recuperación", "ayuda", "tratamiento", "rehabilitación", "esperanza"]
+    },
+    "life-insurance-seniors": {
+      "gancho": "Proteger a tu familia después de que te vayas es una preocupación que todos tenemos. Pero encontrar un seguro de vida que no arruine tu bolsillo siendo adulto mayor puede ser frustrante. Vamos a mostrarte las mejores opciones.",
+      "cta": "Compara las mejores pólizas para adultos mayores aquí",
+      "palabras_poder": ["protección", "familia", "seguro", "adulto mayor", "tranquilidad"]
+    },
+    "online-mba": {
+      "gancho": "Quieres avanzar en tu carrera pero no tienes tiempo para clases presenciales. Un MBA online puede ser la solución, pero elegir el programa correcto entre tantas opciones es confuso. Te ayudamos a decidir.",
+      "cta": "Descubre los mejores programas de MBA online acreditados",
+      "palabras_poder": ["carrera", "crecimiento", "educación", "online", "acreditado"]
+    },
+    "high-risk-auto": {
+      "gancho": "Te rechazaron el seguro por tu historial de manejo y ya no sabes qué hacer. Es estresante, pero no estás solo. Existen aseguradoras especializadas en alto riesgo que te aceptarán. Te mostramos cómo encontrarlas.",
+      "cta": "Cotiza tu seguro de alto riesgo ahora — Sin penalización",
+      "palabras_poder": ["seguro", "alto riesgo", "auto", "cotización", "aceptación"]
+    },
+    "defi-investment": {
+      "gancho": "Quieres invertir en cripto pero el miedo a perder todo te paraliza. Es entendible con tanta volatilidad. Vamos a mostrarte estrategias DeFi probadas para hacer crecer tu capital con riesgo controlado.",
+      "cta": "Accede a las mejores plataformas de inversión DeFi",
+      "palabras_poder": ["inversión", "cripto", "DeFi", "rendimiento", "crecimiento"]
+    },
+    "mesothelioma": {
+      "gancho": "A ti o a un ser querido le diagnosticaron mesotelioma y no saben qué derechos tienen. Es un momento abrumador, pero hay compensaciones disponibles para víctimas de asbesto. Te explicamos tus opciones legales.",
+      "cta": "Verifica si calificas para compensación — Proceso sin costo",
+      "palabras_poder": ["compensación", "mesotelioma", "asbesto", "legal", "justicia"]
+    },
+    "enterprise-cyber": {
+      "gancho": "Tu empresa está expuesta a ciberataques y no tienes la protección adecuada. Un solo breach puede costarte millones. Vamos a mostrarte las soluciones empresariales que realmente funcionan.",
+      "cta": "Solicita una auditoría de seguridad gratuita para tu empresa",
+      "palabras_poder": ["ciberseguridad", "protección", "empresa", "ransomware", "auditoría"]
+    }
+  },
+  "faq_genericas": [
+    {
+      "question": "¿Cuánto tiempo toma ver resultados?",
+      "answer": "Los resultados varían según el caso, pero nuestros sistemas están optimizados para comenzar a generar tracción en cuestión de horas desde la publicación."
+    },
+    {
+      "question": "¿Este servicio tiene algún costo?",
+      "answer": "La consulta inicial es completamente gratuita y sin compromiso. Solo pagas cuando veas resultados."
+    },
+    {
+      "question": "¿Cómo sé si esto es legítimo?",
+      "answer": "Operamos con total transparencia. Todos nuestros procesos están documentados y respaldados por tecnología de punta."
+    }
+  ]
+}
