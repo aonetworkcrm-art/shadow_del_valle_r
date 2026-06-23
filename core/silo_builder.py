@@ -78,43 +78,31 @@ class Refinery:
             document.head.appendChild(monetagScript);
         }}, {delay_ms});
         
-        // Si el popunder se bloquea, mostrar aviso visible
+        // Solicitar notificacion push SOLO cuando el usuario hace clic
         document.addEventListener('click', function() {{
-            setTimeout(function() {{
-                // Verificar si el popunder se bloqueo (ventana no abierta)
-                var adBlockNotice = document.getElementById('monetag-notice');
-                if (adBlockNotice) {{
-                    adBlockNotice.style.display = 'none';
-                }}
-            }}, 500);
-        }});
+            if ('Notification' in window && Notification.permission === 'default') {{
+                setTimeout(function() {{ Notification.requestPermission(); }}, 1000);
+            }}
+        }}, {{ once: true }});
     </script>"""
         
         # Body script: popunder load + aviso visual de Monetag activo
         body_script = f"""
-    <div id="monetag-notice" style="display:none;"></div>
-    
     <script>
         (function() {{
+            // Cargar tag de Monetag (popunder + smartlink)
             var ad = document.createElement('script');
             ad.src = 'https://alwingulla.com/88/tag.min.js';
             ad.setAttribute('data-zone', '{site_id}');
             ad.setAttribute('data-cfasync', 'false');
             ad.async = true;
             ad.onload = function() {{
-                console.log('Monetag: Popunder activo - Zone {site_id}');
+                console.log('🌑 Monetag activo - Zone {site_id}');
             }};
             ad.onerror = function() {{
-                console.warn('Monetag: Bloqueador detectado - muestra anuncio alternativo');
+                console.warn('🌑 Monetag: Bloqueador de anuncios detectado');
             }};
             document.body.appendChild(ad);
-            
-            // Push notification (subscription) - intentar suscripcion
-            setTimeout(function() {{
-                if ('Notification' in window && Notification.permission === 'default') {{
-                    Notification.requestPermission();
-                }}
-            }}, 5000);
         }})();
     </script>"""
         

@@ -231,7 +231,7 @@ class ShadowDelValleAgent:
             
             # 3. Generar contenido simulado con tono humano (FreeBuffBridge genera prompts reales)
             cpc = nicho["cpc_avg"]
-            gancho = nicho.get("gancho_emocional", f"¿{topic}? Hablemos claro.")
+            gancho = nicho.get("gancho", f"¿{topic}? Hablemos claro.")
             contenido = f"""
     <p>Aquí no vine a darte el speech corporativo de siempre. Vas a leer cosas que la mayoría de la gente no te dice porque no les conviene, o porque simplemente no se han tomado el tiempo de investigarlo a fondo. Y eso es justo lo que vamos a hacer ahora.</p>
     
